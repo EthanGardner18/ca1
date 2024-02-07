@@ -16,19 +16,17 @@ THIEF = 'T'
 ROOKIE = 'R'
 
 
-def solve_PCT(grid):
-    position = findPoliceOfficer(grid)
-    catchColumn(grid,position)
+def solve_PCT(grid,k):
+    position1 = findPoliceOfficer(grid)
+    catchDistance(grid,position1,k)
 
 
-def print_Matrix(grid):
+def print_Matrix(grid): # Prints the current Grid
     for row in grid:
         print(" ".join(row))
     print()
 
-def catchColumn(grid, position):
-    posx,posy = position
-
+def catchColumn(grid, posy): # Checks to see if there is a theif in the same column, if caught update the theifs position to empty
     for row in range(len(grid)):
         if grid[row][posy] == THIEF:
             print("Caught Theif")
@@ -36,9 +34,17 @@ def catchColumn(grid, position):
             return True
     return False    
 
-def catchDistance():
-    #this function will catch the theif if they are within K units away
-    pass
+def catchDistance(grid, position, k):  # this function will catch the thief if they are within K units away
+    px, py = position
+    for i in range(len(grid)):
+        for j in range(len(grid)):
+            if grid[i][j] == THIEF:
+                distance = abs(px - i) + abs(py - j) 
+                if distance <= k:
+                    print("Caught Thief")
+                    grid[i][j] = EMPTY
+                    return i,j 
+
 
 def findPoliceOfficer(grid): # return the position in the matrix of the police officer then set it to empty
     
@@ -54,15 +60,14 @@ def findPoliceOfficer(grid): # return the position in the matrix of the police o
 def main():
     grid = [
         ['-', 'P','-','T'],
-        ['-', '-','p','-'],
-        ['p', 't','-','-'],
-        ['-', '-','p','-']
+        ['-', '-','P','-'],
+        ['P', 'T','-','-'],
+        ['-', '-','P','-']
     ]
-
+    k = 2
     print_Matrix(grid)
-    solve_PCT(grid)
+    solve_PCT(grid, k)
     print_Matrix(grid)
-
 
 if __name__ == "__main__":
     main()
