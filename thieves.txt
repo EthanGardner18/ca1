@@ -1,0 +1,33 @@
+Constants: k = 2, Police = 5, 5x5 matrix
+Testing: Thieves = 5
+1: python EG_ca1.py RTRTR TRTRP RPRPR PRRRR RRRTP 2
+2: python EG_ca1.py TPTRT RTRPR PRRRR RPRTR PRRRR 2
+3: python EG_ca1.py PTRTR TRTRP RRRPR PRRRR RPRTR 2
+ 1. 4 thieves caught 
+ 2. 3 theives caught
+ 3. 4 theives caught
+
+Testing: Thieves = 10
+1: python EG_ca1.py TTRTR TRTTP TPRPR PRRTT RRRTP 2
+2: python EG_ca1.py TPTTT RTRPR PTTTR TPRTR PRRRR 2
+3: python EG_ca1.py PTRTR TRTRP TTTPR PRRTT RPRTR 2
+ 1. 5 thieves caught 
+ 2. 5 theives caught
+ 3. 5 theives caught
+
+Testing: Thieves = 15
+1: python EG_ca1.py TTRTR TRTTP TPRPR PTTTT TTTTP 2
+2: python EG_ca1.py TPTTT TTRPR PTTTR TPRTR PTTTT 2
+3: python EG_ca1.py PTRTT TTTTP TTTPT PRTTT RPRTR 2
+ 1. 5 thieves caught 
+ 2. 5 theives caught
+ 3. 5 theives caught
+
+Testing: Thieves = 20
+1: python EG_ca1.py TTTTT TTTTP TPTPT PTTTT TTTTP 2
+2: python EG_ca1.py TPTTT TTTPT PTTTT TPTTT PTTTT 2
+3: python EG_ca1.py PTTTT TTTTP TTTPT PTTTT TPTTT 2
+ 1. 5 thieves caught 
+ 2. 5 theives caught
+ 3. 5 theives caught
+
