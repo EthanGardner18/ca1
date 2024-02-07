@@ -35,7 +35,6 @@ def solve_PCT(grid, k):
 def print_Matrix(grid): # Prints the current Grid 
     for row in grid:
         print(" ".join(row))
-    print()
 
 def catchColumn(grid, position): # Checks to see if there is a theif in the same column, if caught update the theifs position to empty
     posx,posy = position
