@@ -32,7 +32,7 @@ def solve_PCT(grid, k):
             break
 
 
-def print_Matrix(grid): # Prints the current Grid
+def print_Matrix(grid): # Prints the current Grid 
     for row in grid:
         print(" ".join(row))
     print()
